@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <div class="unit-toggle">
+            <label>
+                <input type="radio" name="unit" value="metric" checked>
+                Metric (kg, cm)
+            </label>
+            <label>
+                <input type="radio" name="unit" value="imperial">
+                Imperial (lbs, ft/in)
+            </label>
+        </div>
+
+        <div id="input-fields">
+            <input type="number" id="weight" placeholder="Weight (kg)" step="0.1">
+            <input type="number" id="height" placeholder="Height (cm)" step="0.1">
+        </div>
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div id="result" class="hidden">
+            <h2>Your BMI: <span id="bmi-value"></span></h2>
+            <p>Status: <span id="bmi-status"></span></p>
+            <div class="gauge" id="bmi-gauge"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
